@@ -1,0 +1,546 @@
+#kt_app_main {
+    margin-top: 0;
+}
+
+.app-main, .app-default, body {
+  font-family: "Tajawal", sans-serif !important;
+    background-color: #ffffff!important;
+}
+.form-control.form-control-solid {
+  font-family: "Tajawal", sans-serif !important;
+    background-color: var(--bs-gray-200);
+    border-color: var(--bs-gray-200);
+    color: #ffffff;
+    transition: color .2s ease;
+}
+
+.nav-tabs .nav-link {
+  font-family: "Tajawal", sans-serif !important;
+    color: #232020b3;
+}
+
+.general-tabs .card-header {
+    background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+
+
+
+.alert-block.message {
+  font-family: "Tajawal", sans-serif !important;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alert-block.message .btn-close {
+  font-family: "Tajawal", sans-serif !important;
+    margin-right: 10px;
+}
+
+.attachment {
+    margin-left: 20px;
+}
+
+.form-control {
+    appearance: auto !important;
+}
+
+.btn>i {
+    font-size: inherit !important;
+}
+
+.select2-container .select2-selection--single {
+  font-family: "Tajawal", sans-serif !important;
+    height: 43px !important;
+}
+
+.select2-selection__arrow {
+  font-family: "Tajawal", sans-serif !important;
+    height: 26px;
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    width: 20px;
+}
+
+.select2-selection__arrow b {
+  font-family: "Tajawal", sans-serif !important;
+    border-color: #888 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+.select2-results__options{
+  font-family: "Tajawal", sans-serif !important;
+    line-height: 26px;
+}
+
+.select2-results__option {
+  font-family: "Tajawal", sans-serif !important;
+    padding: 0.8rem 1.50rem !important;
+    font-size: 14px;
+}
+
+.dataTable  td {
+  font-family: "Tajawal", sans-serif !important;
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dataTable .btn {
+  font-family: "Tajawal", sans-serif !important;
+    width: 75px !important;
+}
+
+/* Mouse Cursor Css */
+.mouse-move {font-family: "Tajawal", sans-serif !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    visibility: hidden;
+}
+
+.mouse-inner{
+  font-family: "Tajawal", sans-serif !important;
+    z-index: 10000001;
+}
+
+.mouse-inner, .mouse-inner.mouse-hover {
+  font-family: "Tajawal", sans-serif !important;
+    margin-left: -25px;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    background-color: #6176f6;
+    opacity: 0;
+}
+
+[data-kt-app-layout=dark-sidebar] .app-sidebar {
+  font-family: "Tajawal", sans-serif !important;
+    background-color: #1C2438 !important;
+}
+
+
+@media (min-width: 992px) {
+  font-family: "Tajawal", sans-serif !important;
+    .app-sidebar-menu .menu>.menu-item>.menu-link>.menu-title {
+        font-size: 1.0rem !important;
+    }
+}
+
+[data-kt-app-layout=dark-sidebar] .app-sidebar .menu>.menu-item .menu-link.active
+{
+    background-color: #d8303021  !important;
+  font-family: "Tajawal", sans-serif !important;
+}
+
+@media (min-width: 992px) {
+    .app-sidebar-logo {
+        justify-content: center !important;
+      font-family: "Tajawal", sans-serif !important;
+    }
+}
+
+.btnColor {
+  font-family: "Tajawal", sans-serif !important;
+    background-color: #014294;
+    color: white;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+
+.btn:not(.btn-outline):not(.btn-dashed):not(.btn-bordered):not(.border-hover):not(.border-active):not(.btn-flush):not(.btn-icon) {
+    padding: calc(0.775rem + 1px) calc(0.4rem + 1px);
+    font-size: 11px !important;
+  font-family: "Tajawal", sans-serif !important;
+}
+
+.job-card-checkbox {
+  font-family: "Tajawal", sans-serif !important;
+    background-color: #f6f6f6f6;
+    padding: 10px 10px;
+}
+
+.input-file {
+  font-family: "Tajawal", sans-serif !important;
+    width: 239px !important;
+}
+
+.login-container {
+  font-family: "Tajawal", sans-serif !important;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+  font-family: "Tajawal", sans-serif !important;
+    width: 100%;
+    padding: 30px;
+    background-color: #014294;
+    color: white !important;
+}
+
+.welcome-text {
+  font-family: "Tajawal", sans-serif !important;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.company-logo {
+    width: 100%;
+}
+
+.add-item-details,
+.delete-item-details,
+.delete-employee,
+.add-employee,
+.add-supplier-details,
+.delete-supplier-details,
+.add-employee,
+.add-trip-details,
+.delete-trip-details,
+.add-group-store-in-items,
+.delete-group-store-in-items,
+.delete-gas-details,
+.add-gas-details,
+.add-sales-items,
+.delete-sales-items,
+.add-rfq-items,
+.delete-rfq-items {
+    float: right;
+    border: none;
+    padding: 13px 20px;
+    background-color: #007fc5;
+    color: white;
+    border-radius: 6px;
+  font-family: "Tajawal", sans-serif !important;
+}
+
+.add-item-details, .add-supplier-details {
+    background-color: #007fc5;
+  font-family: "Tajawal", sans-serif !important;
+}
+
+.delete-item-details,
+.delete-employee,
+.delete-supplier-details,
+.delete-trip-details,
+.delete-group-store-in-items,
+.delete-gas-details,
+.delete-sales-items,
+.delete-rfq-items {
+    background-color: red;
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        min-width: 1140px !important;
+      font-family: "Tajawal", sans-serif !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        min-width: 1320px !important;
+      font-family: "Tajawal", sans-serif !important;
+    }
+}
+
+.modal-footer .btn {
+    width: 80px;
+  font-family: "Tajawal", sans-serif !important;
+}
+
+.modal-footer .indicator-label {
+  font-family: "Tajawal", sans-serif !important;
+    font-size: 15px;
+}
+
+.page-header .btnColor {
+  font-family: "Tajawal", sans-serif !important;
+    min-width: 80px;
+}
+
+.btn:not(.btn-outline):not(.btn-dashed):not(.btn-bordered):not(.border-hover):not(.border-active):not(.btn-flush):not(.btn-icon) {
+    font-size: 13px !important;
+  font-family: "Tajawal", sans-serif !important;
+}
+
+.s-no {
+  font-family: "Tajawal", sans-serif !important;
+    font-size: 16px;
+    background-color: #f4f4f4cc;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.editable-select-container {
+  font-family: "Tajawal", sans-serif !important;
+    position: relative;
+}
+
+.editable-select-container option {
+  font-family: "Tajawal", sans-serif !important;
+    height: 30px;
+    line-height: 30px;
+}
+
+.editable-select-container .editOption{
+  font-family: "Tajawal", sans-serif !important;
+    position: absolute;
+    width: calc(100% - 30px);
+}
+
+.label-reports {
+  font-family: "Tajawal", sans-serif !important;
+    width:  40px;
+}
+
+.input-to-from-reports {
+    width:  110px;
+}
+
+.check-box-job-card {
+  font-family: "Tajawal", sans-serif !important;
+    color: #ff0000 !important;
+}
+
+/*@media print {
+    input,
+    textarea,
+    select {
+        display: block !important;  !* Ensures inputs are visible *!
+    }
+}
+
+@media print {
+    input:disabled {
+        background-color: #a52020;
+        color: #987676;
+    }
+}
+
+@media print {
+    input {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}*/
+
+input:disabled {
+  font-family: "Tajawal", sans-serif !important;
+    background-color: #f0f0f0 !important;
+    color: black !important;
+    border: 1px solid #ccc;
+}
+
+/* Disabled input fields */
+input:disabled,
+textarea:disabled,
+select:disabled,
+input[type="checkbox"]:disabled {
+    background-color:#F9FAFB !important;
+    color: black !important;
+    border: 1px solid rgba(177, 181, 191, 0.21) !important;
+    cursor: not-allowed !important;
+  border-radius: 8px;
+}
+
+/* Textareas */
+textarea:disabled {
+    background-color: #F9FAFB !important;
+    color: black !important;
+    border: 1px solid #F9FAFB !important;
+    cursor: not-allowed !important;
+  padding:30px;
+}
+
+/* Select dropdowns */
+select:disabled {
+    background-color: #F9FAFB !important;
+    color: black !important;
+    border: 1px solid #F9FAFB !important;
+    cursor: not-allowed !important;
+}
+
+@media print {
+    input:disabled,
+    textarea:disabled,
+    select:disabled,
+    input[type="checkbox"]:disabled {
+        background-color: #f0f0f0 !important;
+        color: black !important;
+        border: 1px solid #8f8e96 !important;
+        cursor: not-allowed !important;
+    }
+}
+
+.btn-print-div {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-print {
+    padding: 7px 23px;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #007fc5;
+    color: white;
+}
+
+/*#togglePassword, #togglePasswordLogin {
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-50%, 69%);
+}
+
+#togglePasswordLogin {
+    transform: translate(-30%, 75%);
+}*/
+
+#DataTables_Table_0_length {
+    bottom: 50px !important;
+    position: absolute !important;
+    padding: 15px !important;
+    height: 20px !important;
+    left: 170px;
+}
+
+.buttons-html5 {
+    display: none;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #aaa;
+    border-radius: 6px !important;
+    background-color: transparent;
+    padding: 10px !important;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    min-width: 150px;
+    display: inline-block;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    margin-top: 10px !important;
+}
+
+@media (min-width: 992px) {
+    .h-width {
+        gap: 14.5rem !important;
+    }
+}
+
+label {
+  font-family: "Tajawal", sans-serif !important;
+    text-transform: capitalize;
+}
+
+.bg-danger {
+    opacity: 1 !important;
+    background-color: #dc3545 !important; /* Equivalent to rgba(220,53,69,1) */
+}
+
+.bg-dark {
+    opacity: 1 !important;
+    background-color: #212529 !important; /* Equivalent to rgba(33,37,41,1) */
+}
+
+footer {
+  font-family: "Tajawal", sans-serif !important;
+    font-size: 0.9rem !important;
+}
+
+.modal-footer button[type='submit']
+{
+  font-family: "Tajawal", sans-serif !important;
+    background-color:#1C2438;
+    color:#ffffff;
+    width:40%
+}
+
+.btn-add-end {
+    display: flex !important;
+    justify-content: end !important;
+}
+
+.lang-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang-div i {
+    margin-left: 12px;
+}
+
+.btn-lang {
+    border: 1px solid #1C4853;
+    border-radius: 6px;
+    color: #1C2438;
+    padding: 8px 23px;
+    font-size: 13px;
+}
+
+.btn-lang-active {
+    background-color: #1C2438;
+    color: #FFFFFF;
+  padding: 8px 30px!important;
+}
+
+.plate-number-letters {
+    margin-right: 10px;
+}
+
+.h-div-avatar {
+    margin-right: 20px;
+}
+
+.start-rtl {
+    right: 180px !important;
+}
+span-km {
+font-family: "Tajawal", sans-serif;
+padding: 7px!important;
+font-size: 15px!important;                
+font-weight: 100!important;               
+color: #B1B5BF;                                
+  }       
+.project-card {
+ background-color: #F9FAFB!important;
+ border-radius: 10px!important;
+ padding: 20px!important;
+ position: relative;
+ }
+h2 {
+font-family: "Tajawal", sans-serif;
+font-size: 15px!important;                
+font-weight: 100!important;               
+color: #1C2437;                                
+  }       

@@ -1,0 +1,1059 @@
+/* Global Styles */
+body
+{
+    font-family: "Tajawal", sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+input:focus
+{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input::placeholder
+{
+    font-family: "Tajawal", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color:rgba(234, 234, 237, 0.62)!important; 
+}
+
+.row
+{
+    height: 100vh;
+}
+
+.illustration-side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.illustration-side .login-car {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+
+
+
+
+/* Stylized car and scene elements */
+.scene-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 70%;
+    background-color: #d4c675;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Right Side - Login Form */
+.login-side {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 2; /* فوق الخلفية */
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.08); /* شفافية خفيفة فقط */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 450px;
+    max-height: 60vh;
+    overflow-y: auto;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+/* تخصيص مظهر العنصر على الأجهزة الصغيرة */
+@media (max-width: 1024px) {
+    .login-side {
+        top: 40%;
+        left: 33.3%;
+        transform: translate(-50%, -50%);
+        width: 100%; /* لضبط عرض العنصر ليشغل مساحة أكبر على الأجهزة الصغيرة */
+        padding: 0 10px;
+    }
+
+    .login-container {
+        max-width: 100%;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      max-height: 50vh;
+    }
+}
+/* تخصيص مظهر العنصر لكل شاشات الجوال */
+@media (max-width: 768px) {
+    .login-side {
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .login-container {
+        max-width: 100%;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        max-height: 50vh;
+    }
+}
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+/* Optional scrollbar styling for better UX */
+
+.login-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+.login-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.login-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+
+
+
+.login-car
+{
+    width: 80%;
+}
+
+.login-container
+{
+    width: 70%;
+}
+
+.forgot-password
+{
+    font-family: "Tajawal", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color:#ffffff !important;
+}
+
+form label:not([class="form-check-label"])
+{
+    font-family: "Tajawal", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #ffffff!important;
+    font-weight: 500!important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]) {
+    border-radius: 8px !important;
+    background-color:#ffffff12;
+    padding: 6px 10px !important;
+    height: 45px !important;
+    font-size: 14px !important;
+    border-block-width:0.8px;
+
+}
+
+
+input[type="checkbox"]
+{
+    border-color: #B2B6C0;
+}
+
+.forgot-password:hover
+{
+    text-decoration: none !important;
+}
+
+.full-container
+{
+    display: grid;
+    background-color: #1C2438;
+    place-content: center;
+    /*place-items: center;*/
+    height: 100vh;
+}
+
+.brand-logo-large
+{
+    color: #F9FAFB;
+    font-family: 'Black Mango', sans-serif;
+    font-size: 163px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.upload-icon:hover
+{
+    cursor: pointer;
+}
+
+.powered-by
+{
+    font-family: "Tajawal", sans-serif !important;
+    font-size: 25px;
+    color: #F9FAFB;
+    justify-self: end;
+    margin-top: -50px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.tab-container
+{
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transition-container
+{
+    display: grid;
+    background-color: #1C2438;
+    place-content: center;
+    place-items: center;
+    height: 100vh;
+}
+
+.brand-logo-medium
+{
+    color: #F9FAFB;
+    font-family: "Tajawal", sans-serif !important;
+    font-size: 120px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+
+}
+
+.please-check-inbox
+{
+    font-family: var(--public-font);
+    font-size: 42px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.transition-container p
+{
+    font-family: var(--public-font);
+    font-size: 27px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    margin-bottom:0 !important;
+}
+
+.tab-btn {
+    padding: 12px;
+    border: none;
+    background-color: #f5f5f5;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color:#ffffff;
+    color:#1C2438;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #ffffff !important;
+}
+
+.form-control:focus
+{
+    border-color: #D83030;
+    box-shadow: 0 0 0 0.2rem rgba(26, 64, 73, 0.25);
+}
+
+.forgot-password {
+    font-size: 0.85rem;
+    color: #666;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.forgot-password:hover {
+    color: #1a4049;
+    text-decoration: underline;
+}
+
+.main-btn
+{
+    font-family: "Tajawal", sans-serif !important;
+    background-color: #1C2437;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 14px; /* غيري الحج حسب ما تبغي */
+    color: #888;     /* لون البيس هولدر */
+    font-weight: 400; /* الوزن (اختاري) */
+    opacity: 1;      /* تأكدي إنه ظاهر وضوح */
+}
+
+ p {
+    font-size: 14px;          /* حجم انص (غييه حسب رغبك) */
+    font-weight: 200;         /* سم الخط (اختياري) */
+    margin-bottom: 10px;      /* مسافة بين النص واإنبوت */
+   color: #ffffff;
+}
+.form-check-label {
+    font-size: 12px;       /* حجم اخط */
+    color: #ffffff;           /* لون لخط */
+    line-height: 1.5;      /* تباد بين الطور */
+    font-weight: 400;      /* سمك الط */
+    cursor: pointer;       /* يخلي المؤشر يتول لي عند المرو */
+}
+
+
+.main-btn:hover
+{
+    background-color: #1C2438;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-btn:active
+{
+    background-color: #1C2438;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .illustration-side
+    {
+        /*display: none;*/
+    }
+
+    .login-side {
+        /*width: 100%;*/
+    }
+}
+
+
+
+
+
+
+.wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.recover-password-container,
+.verification-code-container
+{
+    width: 50%;
+}
+
+.recover-password-container p,
+.verification-code-container p,
+.recover-password-container h3,
+.verification-code-container h3
+{
+    color: #212330;
+}
+
+.verification-code-container h3,
+.recover-password-container h3
+{
+    font-family: var(--public-font);
+    font-size: 28px;
+    font-weight: 500;
+    color: #212330;
+    letter-spacing: 0;
+    margin: 0 0 10px 0;
+}
+
+.verification-code-container p,
+.recover-password-container p
+{
+    font-family: var(--public-font);
+    font-size: 22px;
+    font-weight: 300;
+    color: #212330;
+    letter-spacing: 0;
+    margin: 0 0 30px 0;
+}
+
+
+.code-digits
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 40px 0;
+}
+
+.code-digits .code-digit
+{
+    border-color: #B1B5BF;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    margin: 0;
+}
+
+.verification-code-container button
+{
+    margin: 0;
+}
+
+.register-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* تعديل موضع البوكس حسب اللغة */
+.register-checkbox .form-check-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #B2B6C0;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    margin-inline-end: 4px; /* يحافظ على التوافق مع RTL وLTR */
+    margin-inline-start: 0;
+}
+
+.register-checkbox .form-check-input:checked {
+    background-color: #2FB493;
+    border-color: #2FB493;
+}
+
+.register-checkbox .form-check-input:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.register-checkbox .form-check-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/**/
+.container
+{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    color: #cfd3dc;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #1C2438, #2a3b59);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tab-btn:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffffd9;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Label styling */
+.form-label {
+    font-size: 14px;
+    color: #dcdcdc;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+
+input
+{
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button
+{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-wrapper {
+    position: relative; /* هم عشان الزر يثبت داخه */
+}
+
+#togglePasswordLogin3 {
+    position: absolute;
+    top: 70%;
+    /*right: 10px;               !* مسافة ن اليمين *!*/
+    transform: translateY(-50%);
+    width: 300px;               /* عرض صغير يناسب الأيقنة */
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #A5A5A5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+:dir(ltr) #togglePasswordLogin3 {
+    left: 220px;
+    right: auto;
+}
+
+/* RTL (Arabic) */
+:dir(rtl) #togglePasswordLogin3 {
+    right: 220px;
+    left: auto;
+}
+
+#togglePasswordLogin3 i {
+    font-size: 18px;
+}
+#togglePasswordLogin {
+    position: absolute;
+    top: 70%;
+    /*right: 10px;*/
+    transform: translateY(-50%);
+    width: 300px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #A5A5A5;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+:dir(ltr) #togglePasswordLogin {
+    left: 220px;
+    right: auto;
+}
+
+/* RTL (Arabic) */
+:dir(rtl) #togglePasswordLogin {
+    right: 220px;
+    left: auto;
+}
+
+#togglePasswordLogin i {
+    font-size: 18px;
+}
+#togglePasswordLogin2 {
+    position: absolute;
+    top: 70%;
+    /*right: 10px;*/
+    transform: translateY(-50%);
+    width: 300px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #A5A5A5;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+:dir(ltr) #togglePasswordLogin2 {
+    left: 220px;
+    right: auto;
+}
+
+/* RTL (Arabic) */
+:dir(rtl) #togglePasswordLogin2 {
+    right: 220px;
+    left: auto;
+}
+#togglePasswordLogin i {
+    font-size: 18px;
+}
+
+img#uploadTrigger2.upload-icon {
+    width: 30%;
+    max-width: 30px;   /* Maximum size */
+    height: auto;
+}
+img#uploadTrigger.upload-icon {
+    width: 30%;
+    max-width: 30px;   /* Maximum size */
+    height: auto;
+}
+label.label-title.mb-2.required {
+    font-family: 'Tajawal', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important; /* لون الص */
+    margin-bottom: 8px !important;
+    display: block !important;
+    position: relative;
+}
+/* نموذج التحقق */
+#verify-otp-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    font-family: 'Tajawal', sans-serif;
+    color: #2c2c2c !important; /* لون عام للنص داخل النموذج */
+}
+
+/* تنسيق حقل الإدخال */
+.single-input {
+    margin-bottom: 20px;
+}
+
+/* عوان الحقول */
+.label-title {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    color: #1a1a1a !important; /* لون انص للعنوان */
+}
+
+/* علامة required */
+.label-title.required::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}
+
+/* تنسيق احقل */
+#code {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    color: #2c2c2c !important; /* لون النص داخل الحق */
+}
+
+/* placeholder */
+#code::placeholder {
+    color: #999 !important; /* لون placeholder */
+}
+
+#code:focus {
+    border-color: #d83030;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(216, 48, 48, 0.2);
+}
+
+/* الر */
+.verify-otp {
+    background-color: #d83030;
+    color: #fff !important; /* لن النص في الزر */
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.verify-otp:hover {
+    background-color: #b82626;
+    color: #fff !important;
+}
+
+/* محااة النص */
+.text-center {
+    text-align: center;
+}
+
+/* لوان الرسائل */
+.text-success {
+    color: #28a745 !important; /* أخضر */
+}
+
+.text-danger,
+.text-error {
+    color: #d83030 !important; /* أحر */
+}
+
+.welcome-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff; /* غر اللون حسب التصميم */
+    text-align: center;
+    margin-bottom: 30px;
+}
+.logo {
+    position: fixed;
+    top: 20%;
+    left: 200px; /* المسافة من اليسار، تقدر تعدلها */
+    transform: translateY(-50%);
+    z-index: 1; /* فوق الخلفية */
+}
+
+.logo img {
+    max-width: 600px; /* تقدر تتحكم بحجم الشعار */
+    height: auto;
+}
+@media (max-width: 1024px) {
+    .logo {
+        top: 7%;
+        left: 50px; /* خليها قريبة من الحافة اليسار */
+        transform: translateY(-50%); /* شيلنا -50% من اليسار */
+    }
+
+    .logo img {
+        max-width: 300px;
+    }
+}
+
+
+.lang-switcher {
+    position: absolute !important;
+    top: 50px !important;
+    right: 2px !important; /* بدل left بـ right لتحديد الجهة اليمنى */
+    z-index: 10 !important;
+    display: flex !important;
+    gap: 10px !important;
+}
+
+.btn-lang {
+    padding: 8px 18px !important;
+    border-radius: 12px !important;
+    border: 1.5px solid transparent !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    background-color: #1f2937 !important; /* لون غامق أنيق */
+    color: #fff !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-lang:hover {
+    background-color: #374151 !important;
+    color: #fff !important;
+    border-color: #9ca3af !important;
+}
+
+.btn-lang-active {
+    background: linear-gradient(135deg, #e53935, #ef4444) !important;
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.25);
+}
+
+.lang-wrapper {
+  position: fixed;
+  top: 10px;
+  right: 300px;
+  z-index: 9999;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 10px;
+}
+
+.confirm-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #22c55e, #16a34a); /* تدرج أخضر عصري */
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+}
+
+.confirm-btn:hover {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    box-shadow: 0 6px 14px rgba(34, 197, 94, 0.45);
+    transform: translateY(-1px);
+}
+
+.confirm-btn:active {
+    transform: scale(0.98);
+}
+.register-btn {
+    padding: 14px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1C2438, #2A324D); /* تدرج غامق أنيق */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(28, 36, 56, 0.3);
+    text-align: center;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #2A324D, #1C2438); /* عكس التدرج عند الـ hover */
+    box-shadow: 0 6px 16px rgba(28, 36, 56, 0.45);
+    transform: translateY(-1px);
+}
+
+.register-btn:active {
+    transform: scale(0.98);
+}
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.phone-input-wrapper.rtl {
+  flex-direction: row-reverse; /* عكس ترتيب العناصر في اللغة العربية */
+}
+
+.phone-input {
+  flex: 2;
+  height: 45px;
+  padding: 0 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+  font-size: 14px;
+}
+
+.phone-input:focus {
+  border-color: #2FB493;
+  outline: none;
+}
+
+.confirm-phone-code-btn {
+  flex: 1;
+  height: 45px;
+  background-color: #2FB493;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  padding: 0 15px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.confirm-phone-code-btn:hover {
+  background-color: #27a380;
+}
+/* لون placeholder */
+input::placeholder {
+    color: #B2B6C0;  /* يمكنك تغيير هذا اللون حسب رغبتك */
+    opacity: 1; /* لضمان أن اللون يظهر بشكل واضح */
+}
+
+/* تغيير لون النص عند الكتابة */
+input:focus {
+    color: #ffffff;  /* هذا هو اللون الذي ستظهر به الأرقام عند الكتابة */
+    border-color: #2FB493;  /* تغيير لون الحدود عند التركيز */
+}
+
+/* لون النص داخل الـ input عند الكتابة */
+input {
+    color: #333;  /* لون النص العادي */
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* التغيير في الـ placeholder عند التركيز */
+input:focus::placeholder {
+    color: #ffffff;  /* تغيير لون الـ placeholder عند التركيز */
+}
+@media (max-width: 768px) {
+    .lang-wrapper {
+        right: 80px;
+        top: -10px;
+    }
+
+    .lang-switcher {
+        flex-direction: row; /* نخليهم صف */
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-lang {
+        padding: 6px 20px !important;
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        top: 7%;
+        left: 20px; /* أقرب للحافة أكثر حسب الجوال */
+        transform: translateY(-50%);
+    }
+
+    .logo img {
+        max-width: 160px; /* نصغّره شوي عشان يناسب حجم الجوال */
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    #togglePasswordLogin,
+    #togglePasswordLogin2,
+    #togglePasswordLogin3 {
+        width: 40px; /* تصغير الزر */
+        height: 40px;
+        font-size: 16px;
+        top: 70%;
+    }
+
+    :dir(ltr) #togglePasswordLogin,
+    :dir(ltr) #togglePasswordLogin2,
+    :dir(ltr) #togglePasswordLogin3 {
+        right: 0px; /* أقرب للطرف الأيسر */
+        left: auto;
+    }
+
+    :dir(rtl) #togglePasswordLogin,
+    :dir(rtl) #togglePasswordLogin2,
+    :dir(rtl) #togglePasswordLogin3 {
+        left: 10px; /* أقرب للطرف الأيمن */
+        right: auto;
+    }
+  @media (max-width: 768px) {
+    .tab-btn {
+        font-size: 12px; /* حجم الخط أكبر شوي للجوال */
+        padding: 10px 12px; /* تقليل البادينغ للتناسق */
+    }
+}
+

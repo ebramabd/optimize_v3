@@ -1,0 +1,52 @@
+/* Overall table styling */
+.print-footer {
+    width: 100%;
+    margin: 10px;
+    padding: 0 10px 10px 10px;
+    border-collapse: collapse;
+    border-top: 5px solid black;
+}
+
+/* Text alignment for Arabic and English */
+.text-end {
+    text-align: right;
+}
+
+.text-start {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Padding adjustments */
+.padding-top {
+    padding-top: 10px;
+}
+
+.padding-bottom {
+    padding-bottom: 20px;
+}
+
+.padding-left {
+    padding-left: 10px;
+}
+
+.padding-right {
+    padding-right: 10px;
+}
+
+/* Signature image styling */
+.signature-img {
+    width: 150px;
+    height: 55px;
+}
+
+/* Warning text styling */
+.warning-text {
+    color: red; /* Red color for warning text */
+    font-size: 12px;
+    text-align: center;
+}
+

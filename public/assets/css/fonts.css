@@ -1,0 +1,44 @@
+/* Black Mango */
+@font-face
+{
+    font-family: 'Black Mango';
+    src: url('../fonts/black-mango/black-mango.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* League Spartan */
+@font-face
+{
+    font-family: 'League Spartan';
+    src: url('../fonts/league-spartan/league-spartan.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Graphik Arabic */
+@font-face
+{
+    font-family: 'Graphik Arabic';
+    src: url('../fonts/graphik-arabic/graphik-arabic-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Graphik Arabic';
+    src: url('../fonts/graphik-arabic/graphik-arabic-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Graphik Arabic';
+    src: url('../fonts/graphik-arabic/graphik-arabic-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+

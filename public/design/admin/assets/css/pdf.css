@@ -1,0 +1,124 @@
+.print-container {
+    width: 100%;
+    border-collapse: collapse;
+    color: black;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.small-title {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.big-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.logo-img {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    /*max-width: 200px;*/
+    /*height: auto;*/
+    margin-bottom: 10px;
+}
+
+.info-row {
+    border-bottom: 2px solid #333;
+}
+
+.info-row-border {
+    border-bottom: 2px solid #333;
+}
+
+.first-row {
+    border-top: 5px solid darkblue;
+}
+
+.last-row {
+    border-bottom: 3px solid darkblue;
+    padding-bottom: 10px;
+}
+
+.info-row td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    width: 33.33%;
+}
+
+/* Styling for Info Labels */
+.info-label {
+    font-weight: bolder;
+    padding: 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Styling for Info Values */
+.info-value {
+    padding: 10px 0;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.service-header {
+    background-color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.service {
+    padding: 10px;
+}
+.service-row td {
+    padding: 10px;
+    font-size: 12px;
+    vertical-align: top;
+}
+
+.service-name {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.service-details {
+    font-size: 10px;
+    margin-top: 5px;
+    padding: 10px;
+
+}
+
+.service-cost {
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.image-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.car-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 5px;
+}
+
+.padding {
+    padding: 5px 0;
+}
