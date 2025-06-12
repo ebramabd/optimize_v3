@@ -96,17 +96,13 @@ class ProcessServiceData extends Model
 
     public static function index_page()
     {
-//        return DB::table('process_service_data')
-//            ->join('cars', 'process_service_data.car_id' , '=' ,'cars.id')
-//            ->join('users' ,'process_service_data.administrator' , '=' ,'users.id')
-//            ->join('companies' ,'process_service_data.branch_id' , '=' ,'companies.id')
-//            ->get(
-//                ['process_service_data.id as id' , 'cars.type as type' , 'users.name as administrator' , 'company_name']
-//            );
         return DB::table('process_service_data')
             ->join('cars', 'process_service_data.car_id' , '=' ,'cars.id')
-            ->join('users' ,'process_service_data.administrator' , '=' ,'users.id')
-            ->get();
+//            ->join('users' ,'process_service_data.administrator' , '=' ,'users.id')
+            ->join('companies' ,'process_service_data.branch_id' , '=' ,'companies.id')
+            ->get(
+                ['process_service_data.id as id' , 'cars.type as type'  , 'company_name']
+            );
     }
     public static function get_client($process_id)
     {

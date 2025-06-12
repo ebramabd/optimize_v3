@@ -51,7 +51,7 @@
                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                         <th class="min-w-125px">#</th>
                         <th class="min-w-125px">{{ __('common.car_type') }}</th>
-                        <th class="min-w-125px">{{ __('common.administrator') }}</th>
+{{--                        <th class="min-w-125px">{{ __('common.administrator') }}</th>--}}
                         <th class="min-w-125px">{{ __('common.company_name') }}</th>
                         <th class="min-w-125px">{{ __('admin.action') }}</th>
                     </tr>
@@ -79,11 +79,11 @@
             name: 'type',
             className: "text-start",
         },
-        {
-            data: 'administrator',
-            name: 'administrator',
-            className: "text-start",
-        },
+        // {
+        //     data: 'administrator',
+        //     name: 'administrator',
+        //     className: "text-start",
+        // },
         {
             data: 'company_name',
             name: 'company_name',
