@@ -91,12 +91,27 @@ class ProcessServiceController extends Controller
 
     public function delete($id)
     {
-        $object = $this->brandService->delete(model: new Brand() ,id: $id);
-        if ($object == null) {
+        try {
+            // Delete related ProcessServiceProduct entries first
+            ProcessServiceProduct::where('process_id', $id)->delete();
+
+            $process = ProcessServiceData::find($id);
+
+            if (!$process) {
+                return redirect()->back()->with('error', __('messages.error_msg'));
+            }
+
+            // Delete the ProcessServiceData entry
+            $process->delete();
+
+            return redirect()->back()->with('success', __('messages.success_msg'));
+
+        } catch (\Exception $e) {
+            \Log::error("Error deleting process with ID {$id}: " . $e->getMessage());
             return redirect()->back()->with('error', __('messages.error_msg'));
         }
-        return redirect()->back()->with('success', __('messages.success_msg'));
     }
+
     public function get_brands(Request $request)
     {
         $brandsItems = \App\Models\BrandService::where('service_id', $request->service_id)
@@ -113,7 +128,6 @@ class ProcessServiceController extends Controller
             )
             ->groupBy('brands.id', 'brands.brand_name', 'brand_services.item_id')
             ->get();
-
         return response()->json($brandsItems);
     }
 
