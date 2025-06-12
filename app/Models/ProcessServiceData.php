@@ -121,7 +121,7 @@ class ProcessServiceData extends Model
     public static function get_administrator($process_id)
     {
         return DB::table('process_service_data')
-            ->join('users' ,'process_service_data.administrator' , '=' ,'users.id')
+            ->join('administrators' ,'process_service_data.administrator' , '=' ,'administrators.id')
             ->where('process_service_data.id' , $process_id)
             ->first();
     }
