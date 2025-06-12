@@ -17,7 +17,12 @@ class ServiceService
 
     public function get_services($data)
     {
-        $model = $this->getAllObject(new Service());
+        if (isset($data['filter']) && $data['filter'] === 'specific') {
+            $model = Service::whereNull('branch_id');
+        } else {
+            $model = Service::query(); // all services
+        }
+
         return $this->getTableData($model);
     }
 

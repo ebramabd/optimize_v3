@@ -15,11 +15,20 @@ class TermsService
 
     public function get_terms($data)
     {
-        $model = DB::table('terms_of_agreements')
-            ->leftJoin('companies', 'terms_of_agreements.branch_id', '=', 'companies.id')
-            ->get([
-                'terms_of_agreements.id' , 'companies.company_name' ,'terms_of_agreements.condition_text','terms_of_agreements.condition_text_ar'
-            ]);
+        if (isset($data['filter']) && $data['filter'] === 'specific') {
+            $model = DB::table('terms_of_agreements')
+                ->whereNull('branch_id')
+                ->leftJoin('companies', 'terms_of_agreements.branch_id', '=', 'companies.id')
+                ->get([
+                    'terms_of_agreements.id' , 'companies.company_name' ,'terms_of_agreements.condition_text','terms_of_agreements.condition_text_ar'
+                ]);
+        } else {
+            $model = DB::table('terms_of_agreements')
+                ->leftJoin('companies', 'terms_of_agreements.branch_id', '=', 'companies.id')
+                ->get([
+                    'terms_of_agreements.id' , 'companies.company_name' ,'terms_of_agreements.condition_text','terms_of_agreements.condition_text_ar'
+                ]);
+        }
 
         return $this->getTableData($model);
     }
