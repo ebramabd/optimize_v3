@@ -98,10 +98,10 @@ class ProcessServiceData extends Model
     {
         return DB::table('process_service_data')
             ->join('cars', 'process_service_data.car_id' , '=' ,'cars.id')
-//            ->join('users' ,'process_service_data.administrator' , '=' ,'users.id')
+            ->join('administrators' ,'process_service_data.administrator' , '=' ,'administrators.id')
             ->join('companies' ,'process_service_data.branch_id' , '=' ,'companies.id')
             ->get(
-                ['process_service_data.id as id' , 'cars.type as type'  , 'company_name']
+                ['process_service_data.id as id' , 'cars.type as type' , 'administrators.administrator_name as administrator' , 'company_name']
             );
     }
     public static function get_client($process_id)
