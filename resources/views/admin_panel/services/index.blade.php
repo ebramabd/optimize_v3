@@ -8,6 +8,29 @@
 @endpush
 
 @section('content')
+    <style>
+        .form-check-input {
+            width: 1.2em;
+            height: 1.2em;
+            margin-top: 0.2em;
+        }
+
+        .form-check-label {
+            font-size: 1rem;
+            margin-left: 0.5rem;
+            color: #333;
+        }
+
+        .form-check-input:checked {
+            background-color: #0d6efd; /* Bootstrap primary */
+            border-color: #0d6efd;
+        }
+
+        .form-check-input:focus {
+            box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+        }
+    </style>
+
     <!--begin::Content container-->
     <div id="kt_app_content_container" class="app-container container-xxl">
         <!-- Page Header -->
@@ -44,6 +67,22 @@
             </div>
             <!--end::Card header-->
             <!--begin::Card body-->
+            <div class="mb-4" style="text-align: center">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" style="display: flow" name="service_filter" id="all_services" value="all" checked>
+                    <label class="form-check-label fw-semibold" for="all_services">
+                        All Services
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" style="display: flow" name="service_filter" id="specific_services" value="specific">
+                    <label class="form-check-label fw-semibold" for="specific_services">
+                        Default Services
+                    </label>
+                </div>
+            </div>
+
             <div class="card-body pt-0">
                 <!--begin::Table-->
                 <table class="table align-middle table-row-dashed fs-6 gy-5 ajax-data-table">
@@ -86,12 +125,38 @@
         },
         ];
 
-        console.log(columns);
-
         var ajax_url = "{!! route('admin-panel.services.index') !!}";
 
+
+        let table;
+
+        function loadDataTable(filter = 'all') {
+            if (table) {
+                table.destroy();
+            }
+
+            table = $('.ajax-data-table').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: ajax_url,
+                    data: function (d) {
+                        d.filter = filter;
+                    }
+                },
+                columns: columns,
+            });
+        }
+
         $(function () {
-            createDatatable(columns, ajax_url);
+            // Initial load
+            loadDataTable();
+
+            // Reload on radio change
+            $('input[name="service_filter"]').on('change', function () {
+                let selectedFilter = $(this).val();
+                loadDataTable(selectedFilter);
+            });
         });
 
         $.fn.dataTable.ext.errMode = 'none';

@@ -27,7 +27,7 @@ class TermsController extends Controller
         if ($request->ajax()) {
             return $this->termService->get_terms($request->all());
         }
-       
+
         return view('admin_panel.terms.index');
     }
 
