@@ -241,7 +241,7 @@
                 <div class="section-title mt-4">{{ __('common.administrator') }}</div>
                 <div class="col-md-12">
                     <select class="form-select" name="administrator" id="admin-select">
-                        <option selected>{{$administrator->name}}</option>
+                        <option selected>{{$administrator->administrator_name}}</option>
                     </select>
                 </div>
 
