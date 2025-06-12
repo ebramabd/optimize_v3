@@ -25,7 +25,7 @@ class ProcessService
 
     public function get_process($data)
     {
-        $model = ProcessServiceData::index_page();
+        return$model = ProcessServiceData::index_page();
         return $this->getTableData($model);
     }
 
