@@ -18,7 +18,6 @@ use App\Services\ServiceService;
 use App\Services\TermsService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-//testing line
 class CarFormController extends Controller
 {
     protected $processService;
@@ -54,7 +53,7 @@ class CarFormController extends Controller
 
        $otp = Otp::where('unique_key', $request->unique_key)->first();
        if (!$otp || $otp->status != OtpStatus::Active->value) {
-           return redirect()->back()->with('error', __('Please Validate Otp'));
+//           return redirect()->back()->with('error', __('Please Validate Otp'));
        }
 
        $object =  $this->processService->save_process($request);
