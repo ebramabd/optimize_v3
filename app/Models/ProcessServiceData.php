@@ -105,6 +105,7 @@ class ProcessServiceData extends Model
 //            );
         return DB::table('process_service_data')
             ->join('cars', 'process_service_data.car_id' , '=' ,'cars.id')
+            ->join('users' ,'process_service_data.administrator' , '=' ,'users.id')
             ->get();
     }
     public static function get_client($process_id)
