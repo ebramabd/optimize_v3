@@ -30,10 +30,10 @@ class ProcessServiceController extends Controller
 
     public function index(Request $request)
     {
-//        if ($request->ajax()) {
+        if ($request->ajax()) {
             return $this->processService->get_process($request->all());
-//        }
-//        return view('admin_panel.process_service.index');
+        }
+        return view('admin_panel.process_service.index');
     }
 
     public function save($id = null)
