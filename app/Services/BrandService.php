@@ -12,7 +12,11 @@ class BrandService
 
     public function get_brands($data)
     {
-        $model = $this->getAllObject(new Brand());
+        if (isset($data['filter']) && $data['filter'] === 'specific') {
+            $model = Brand::get_default_brands();
+        } else {
+            $model = $this->getAllObject(new Brand());
+        }
         return $this->getTableData($model);
     }
 

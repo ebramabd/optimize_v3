@@ -20,7 +20,11 @@ class ItemService
 
     public function get_items_admin($data)
     {
-        $model = Item::get_brand_name();
+        if (isset($data['filter']) && $data['filter'] === 'specific') {
+            $model = Item::get_default_items();
+        } else {
+            $model = Item::get_brand_name(); // all items
+        }
         return $this->getTableDataAdmin($model);
     }
 
