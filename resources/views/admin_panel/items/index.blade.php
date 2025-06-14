@@ -44,6 +44,21 @@
             </div>
             <!--end::Card header-->
             <!--begin::Card body-->
+            <div class="mb-4" style="text-align: center">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" style="display: flow" name="service_filter" id="all_services" value="all" checked>
+                    <label class="form-check-label fw-semibold" for="all_services">
+                        All Items
+                    </label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" style="display: flow" name="service_filter" id="specific_services" value="specific">
+                    <label class="form-check-label fw-semibold" for="specific_services">
+                        Default Items
+                    </label>
+                </div>
+            </div>
             <div class="card-body pt-0">
                 <!--begin::Table-->
                 <table class="table align-middle table-row-dashed fs-6 gy-5 ajax-data-table">
@@ -96,8 +111,37 @@
 
         var ajax_url = "{!! route('admin-panel.items.index') !!}";
 
+
+
+        let table;
+
+        function loadDataTable(filter = 'all') {
+            if (table) {
+                table.destroy();
+            }
+
+            table = $('.ajax-data-table').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: ajax_url,
+                    data: function (d) {
+                        d.filter = filter;
+                    }
+                },
+                columns: columns,
+            });
+        }
+
         $(function () {
-            createDatatable(columns, ajax_url);
+            // Initial load
+            loadDataTable();
+
+            // Reload on radio change
+            $('input[name="service_filter"]').on('change', function () {
+                let selectedFilter = $(this).val();
+                loadDataTable(selectedFilter);
+            });
         });
 
         $.fn.dataTable.ext.errMode = 'none';
