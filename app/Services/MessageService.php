@@ -43,7 +43,9 @@ class MessageService
                 //     templateSID: config('twilio.twilio_otp_template_sid'),
                 //     parameters: $parameters,
                 // );
-                $message = "*{$otp->code}* is your verification code. For your security, do not share this code.";
+                // $message = "*{$otp->code}* is your verification code. For your security, do not share this code.";
+                $message = "شركة DES \n"
+          ."رمز التحقق: *{$otp->code}* لدخول منصة DES ";
                 // Send via Taqnyat
                 $send_res = SMSService::send(
                     message: $message,
@@ -81,7 +83,7 @@ class MessageService
         //     parameters: $parameters,
         // );
 
-        $message = "عزيزي {$carOwnerName}\nسيارتك جاهزه للإستلام\nشكرا لإختيارك {$companyName}";
+        $message = "عزيزي {$carOwnerName}\n\nسيارتك جاهزة للاستلام\n\nشكراً لاختيارك خدماتنا";
         // Send via Taqnyat
         $send_res = SMSService::send(
             message: $message,
@@ -120,7 +122,7 @@ class MessageService
 
         $message = "اتفاقية تقديم الخدمة\n";
         $message .= "عزيزي {$carOwnerName}\n";
-        $message .= "شكرا لاختيارك {$companyName}\n";
+        $message .= "شكرا لاختيارك  خدماتنا\n";
         $message .= $fullMediaUrl;
         // Send via Taqnyat
         $send_res = SMSService::send(
@@ -158,7 +160,7 @@ class MessageService
         $message = "سند تسليم المركبة\n";
         $message .= "عزيزي {$carOwnerName}\n";
         $message .= "تم تسليم المركبة الخاصة بك بنجاح\n";
-        $message .= "شكرا لاختيارك {$companyName}\n";
+        $message .= "شكرا لاختيارك خدماتنا \n";
         $message .= $fullMediaUrl;
         // Send via Taqnyat
         $send_res = SMSService::send(
